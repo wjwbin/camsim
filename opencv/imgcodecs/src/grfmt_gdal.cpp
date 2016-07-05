@@ -41,7 +41,7 @@
 #include "precomp.hpp"
 
 // GDAL Macros
-//#include "cvconfig.h"
+#include "cvconfig.h"
 
 #ifdef HAVE_GDAL
 

@@ -44,7 +44,7 @@
 #ifndef __OPENCV_CORE_PRIVATE_CUDA_HPP__
 #define __OPENCV_CORE_PRIVATE_CUDA_HPP__
  
-//#include "cvconfig.h"
+#include "cvconfig.h"
 
 #include "core/cvdef.h"
 #include "core/base.hpp"

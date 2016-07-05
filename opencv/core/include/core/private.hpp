@@ -46,7 +46,7 @@
 
 
 #include "core.hpp"
-//#include "cvconfig.h"
+#include "cvconfig.h"
 
 #ifdef HAVE_EIGEN
 #  if defined __GNUC__ && defined __APPLE__

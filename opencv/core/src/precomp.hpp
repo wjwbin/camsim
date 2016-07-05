@@ -44,7 +44,7 @@
 #define __OPENCV_PRECOMP_H__
 
 //#include "opencv2/opencv_modules.hpp"
-//#include "cvconfig.h"
+#include "cvconfig.h"
 
 #include "core/utility.hpp"
 #include "core/core_c.h"

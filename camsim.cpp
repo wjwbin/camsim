@@ -17,10 +17,10 @@
  */
 #include <stdlib.h>
 #include <iostream>
+#include <string>
 
 #include "core.hpp"
 #include "imgcodecs.hpp"
-#include "imgcodecs/imgcodecs_c.h"
 
 using namespace std;
 using namespace cv;
@@ -28,11 +28,15 @@ using namespace cv;
 int main(int argc, char *argv[])
 {
   Mat img;
-  img = imread("/data/test.jpg", CV_LOAD_IMAGE_COLOR);
-  if (! img.data) {
+  string img_path("/local/mnt/workspace/private/camsim/test/pics/IMG_01.jpg");
+
+  img = imread(img_path.c_str(), CV_LOAD_IMAGE_COLOR);
+  if (img.data == NULL) {
     cout << "Could not open or find the image!" << endl;
     return -1;
   }
+
+  cout << img.size << endl;
 
   return 0;
 }
