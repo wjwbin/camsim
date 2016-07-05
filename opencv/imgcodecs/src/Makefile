@@ -4,11 +4,16 @@ OPENCV_DIR = $(TOP_DIR)/opencv
 VPATH = . $(OBJ_DIR)
 MKDIR = mkdir
 
+INC_DIR := $(TOP_DIR)/include
+INC_DIR += -I../include
+INC_DIR += -I$(OPENCV_DIR)/core/include
+INC_DIR += -I$(OPENCV_DIR)/imgproc/include
+INC_DIR += -I$(OPENCV_DIR)/hal/include
+INC_DIR += -I$(OPENCV_DIR)/3rdparty/libjpeg
+
 CC = g++
 LD = g++
-CFLAGS = -Wall -I$(TOP_DIR)/include  -I ../include -I$(OPENCV_DIR)/core/include \
-				 -I$(OPENCV_DIR)/imgproc/include \
-				 -I$(OPENCV_DIR)/hal/include -I$(OPENCV_DIR)/3rdparty/libjpeg -c
+CFLAGS = -Wall -I$(INC_DIR) -c
 
 SRCS = $(wildcard *.cpp)
 OBJS = $(patsubst %.cpp, %.o, $(SRCS))

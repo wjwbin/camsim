@@ -3,8 +3,12 @@
 CC = gcc
 LD = g++
 MAKE = make
-OPENCV_DIR = opencv/
-CFLAGS = -c -Wall -I include -I$(OPENCV_DIR)/core/include -I$(OPENCV_DIR)/imgcodecs/include -I$(OPENCV_DIR)/hal/include
+OPENCV_DIR = opencv
+INC_DIR := include
+INC_DIR += -I$(OPENCV_DIR)/core/include
+INC_DIR += -I$(OPENCV_DIR)/imgcodecs/include
+INC_DIR += -I$(OPENCV_DIR)/hal/include
+CFLAGS = -c -Wall -I include -I$(INC_DIR)
 OBJ_DIR = debug/obj
 
 # Assign SRCS with all cpp source file
