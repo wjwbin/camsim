@@ -4237,8 +4237,8 @@ Point LineIterator::pos() const
 
 } // cv
 
-#ifndef DISABLE_OPENCV_24_COMPATIBILITY
+//#ifndef DISABLE_OPENCV_24_COMPATIBILITY
 #include "imgproc/imgproc_c.h"
-#endif
+//#endif
 
 #endif

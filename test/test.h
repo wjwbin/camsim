@@ -1,12 +1,12 @@
 /*
  * =====================================================================================
  *
- *       Filename:  camsim.cpp
+ *       Filename:  test.h
  *
  *    Description:  N/A
  *
  *        Version:  1.0
- *        Created:  07/04/2016 05:17:25 PM
+ *        Created:  07/05/2016 10:09:05 PM
  *       Revision:  none
  *       Compiler:  g++
  *
@@ -15,21 +15,26 @@
  *
  * =====================================================================================
  */
-#include <stdlib.h>
-#include <iostream>
-#include <string>
+
+#ifndef _TEST_H_
+#define _TEST_H_
 
 #include "core.hpp"
-#include "imgcodecs.hpp"
+#include <string>
 
-#include "test.h"
+class Test {
+public:
+  Test();
+  virtual ~Test();
 
-using namespace std;
-using namespace cv;
+  bool loadImage(const std::string& filename);
+  bool optImage();
+  bool saveImage(const std::string& filename);
 
-int main(int argc, char *argv[])
-{
-  Test::run();
-  return 0;
-}
+  static void run();
+private:
+  cv::Mat image;
+  cv::Mat outImg;
+};
 
+#endif

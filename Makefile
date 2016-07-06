@@ -5,6 +5,7 @@ LD = g++
 MAKE = make
 OPENCV_DIR = opencv
 INC_DIR := include
+INC_DIR += -Itest
 INC_DIR += -I$(OPENCV_DIR)/core/include
 INC_DIR += -I$(OPENCV_DIR)/imgcodecs/include
 INC_DIR += -I$(OPENCV_DIR)/hal/include
