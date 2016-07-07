@@ -11,6 +11,7 @@ INC_DIR += -I$(OPENCV_DIR)/imgcodecs/include
 INC_DIR += -I$(OPENCV_DIR)/hal/include
 CFLAGS = -c -Wall -I include -I$(INC_DIR)
 OBJ_DIR = debug/obj
+VPATH = . $(OBJ_DIR)
 
 # Assign SRCS with all cpp source file
 SRCS = $(wildcard *.cpp)
@@ -18,11 +19,12 @@ SRCS = $(wildcard *.cpp)
 OBJS=$(patsubst %.cpp, %.o, $(SRCS))
 
 #TODO: automatically search sub directory.
-SUBDIR = test/ opencv/
+SUBDIR = test/ opencv/ parser/ isp/
 #SUBDIRS=$(shell ls -l | grep ^d | awk '{if($$9 != "debug") print $$9}')
 RM = rm -rf
 
 all: $(SUBDIR) $(OBJS) target
+#all: $(OBJS)
 
 # call subdirectory makefile
 $(SUBDIR):echo
@@ -39,3 +41,4 @@ target:
 
 clean:
 	$(RM) $(OBJ_DIR)
+	$(RM) debug/camsim
