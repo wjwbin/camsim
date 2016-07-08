@@ -28,6 +28,6 @@ using namespace cv;
 #define ISP_ROLLOFF
 //#define ISP_WHITEBALANCE
 
-Mat process_raw(Mat input);
+Mat isp_process_raw(Mat input);
 
 #endif

@@ -56,7 +56,7 @@ struct IspPipeline
     curModules.push_back( makePtr<ModuleXXX>() );
 #endif
 	sort(curModules.begin(), curModules.end(), moduleComp);
-	showPipeline();
+	//showPipeline();
   }
 
   void showPipeline() {
@@ -69,7 +69,7 @@ struct IspPipeline
 
 static IspPipeline isp;
 
-Mat process_raw(Mat input)
+Mat isp_process_raw(Mat input)
 {
   Mat output(input);
   return output;
